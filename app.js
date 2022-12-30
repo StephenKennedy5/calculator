@@ -15,13 +15,17 @@ equal_sign.addEventListener('click', () => operate(first_val,display_value,opera
 function display_number(number) {
     display_value += String(number);
     document.getElementById('display').textContent = `${display_value}`;
-    console.log(number);
+    // console.log(number);
 }
 
 function sign_val(sign) {
+    if (operator_val) {
+        operate(first_val,display_value,operator_val)
+        // console.log(operator_val, display_value, first_val)
+    }
     first_val = display_value;
     operator_val = sign;
-    console.log(first_val, operator_val)
+    // console.log(first_val, operator_val)
     display_value = '';
     // clear();
 }
