@@ -22,7 +22,8 @@ function sign_val(sign) {
     first_val = display_value;
     operator_val = sign;
     console.log(first_val, operator_val)
-    clear();
+    display_value = '';
+    // clear();
 }
 
 function clear() {
