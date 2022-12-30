@@ -56,9 +56,10 @@ function divide(a,b) {
 function operate(a,b,sign) {
     let a_val = parseInt(a)
     let b_val = parseInt(b);
-    console.log(a_val, typeof a_val)
-    console.log(b_val, typeof b_val)
-    console.log(a,b,sign);
+    operator_val = '';
+    // console.log(a_val, typeof a_val)
+    // console.log(b_val, typeof b_val)
+    // console.log(a,b,sign);
     if (sign === "+") {
         document.getElementById('display').textContent = `${add(a_val,b_val)}`;
         display_value = add(a_val,b_val);
@@ -66,8 +67,13 @@ function operate(a,b,sign) {
         document.getElementById('display').textContent = `${subtract(a_val,b_val)}`;
         display_value = subtract(a_val,b_val);
     } else if (sign === "%") {
-        document.getElementById('display').textContent = `${divide(a,b)}`;
-        display_value = divide(a,b);
+        if (b === '0') {
+            document.getElementById('display').textContent = "Can't dividee by 0 enter new value.";
+            display_value = '';
+        } else {
+            document.getElementById('display').textContent = `${divide(a,b)}`;
+            display_value = divide(a,b);
+        }
     } else if (sign === "x") {
         document.getElementById('display').textContent = `${multiply(a,b)}`;
         display_value = multiply(a,b);
