@@ -33,6 +33,7 @@ function sign_val(sign) {
 function clear() {
     document.getElementById('display').textContent = '0';
     display_value = '';
+    operator_val = '';
 }
 
 
