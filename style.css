@@ -1,0 +1,38 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 2px black solid;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#display {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 10px 20px;
+    border: 1px black solid;
+}
+
+.first-row {
+    /* display: flex; */
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.second-row {
+    display: flex;
+    padding: 10px;
+}
+
+.third-row {
+    display: flex;
+    padding: 10px;
+}
+
+.fouth-row {
+    display: flex;
+    padding: 10px;
+}
